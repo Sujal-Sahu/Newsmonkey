@@ -2,7 +2,6 @@ import React from 'react'
 import Mainnews from './mainnews'
 import Spinner from './spinner';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import LoadingBar from 'react-top-loading-bar'
 import propTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
@@ -23,9 +22,9 @@ const News = (props)=>{
      useEffect(()=>{
       async function getapifirst(){
       props.setprogress1(0);
-      setloading(true)
+      setloading(true);
       let country = text.slice(0,2);
-        let apisource = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apikey1}&category=${cat}&page=${page}&pagesize=18`;
+      let apisource = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apikey1}&category=${cat}&page=${page}&pagesize=18`;
     let data = await fetch(apisource);
     props.setprogress1(20);
     let arrdata =await data.json();
@@ -96,7 +95,7 @@ const News = (props)=>{
          {loading && <Spinner />}
          <h1 className='text-center' style={mystyle}>NewsMonkey-Top {capitalizeFirstLetter(props.cat)} Headlines</h1>
          <InfiniteScroll
-            dataLength={articles.length} //This is important field to render the next data
+            dataLength={34} //This is important field to render the next data
             next={fetchData}
             hasMore={len<=totalresults}
             loader={<Spinner />}
