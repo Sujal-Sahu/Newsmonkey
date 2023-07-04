@@ -24,7 +24,7 @@ const News = (props)=>{
       props.setprogress1(0);
       setloading(true);
       let country = text.slice(0,2);
-      let apisource = `https://newsdata.io/api/1/news?apikey=pub_257020cb3fe91b9f1522f9b510148bfca2a7f&category=${cat}&country=${country}&language=en`;
+      let apisource = `https://newsdata.io/api/1/news?apikey=${apikey1}&category=${cat}&country=${country}&language=en`;
     let data = await fetch(apisource);
     props.setprogress1(20);
     let arrdata =await data.json();
@@ -65,7 +65,6 @@ const News = (props)=>{
       getdata(page);
   }
   const fetchData = async()=>{
-    console.log(len);
   let country = text.slice(0,2);
   // let apisource = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apikey1}&category=${cat}&page=${page+1}&pagesize=18`;
   let apisource = `https://newsdata.io/api/1/news?apikey=pub_257020cb3fe91b9f1522f9b510148bfca2a7f&category=${cat}&country=${country}&language=en&page=${page}`;

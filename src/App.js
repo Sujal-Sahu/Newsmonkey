@@ -22,7 +22,7 @@ const App = ()=>{
   const setprogress1=(progrss)=>{
     setprogress(progrss)
   }
-    var apiKey = process.env.REACT_APP_API_KEY;
+    const apiKey = process.env.REACT_APP_API_KEY;
     const togglecolor =()=>{
       if(mode==="dark"){
         settogglestyle({
