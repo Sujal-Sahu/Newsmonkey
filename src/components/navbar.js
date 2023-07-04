@@ -28,7 +28,7 @@ const Navbar =(props)=>{
                     <Link className="nav-link active" aria-current="page" to="/Technology">Technology</Link>
                   </li>
                   <li className="nav-item" style={{margin:"0% 3%"}}>
-                    <Link className="nav-link active" aria-current="page" to="/Buisness">Business</Link>
+                    <Link className="nav-link active" aria-current="page" to="/Business">Business</Link>
                   </li>
                   <li className="nav-item" style={{margin:"0% 3%"}}>
                     <Link className="nav-link active" aria-current="page" to="/Health">Health</Link>

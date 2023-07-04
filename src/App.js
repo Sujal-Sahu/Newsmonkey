@@ -31,7 +31,7 @@ const App = ()=>{
         })
         setmode("light");
         setswitchst({
-          color:"black",
+          color:"#212529",
           background:"white"
         })
         document.body.style.background = "black";
@@ -45,7 +45,7 @@ const App = ()=>{
         setmode("dark");
         setswitchst({
           color:"white",
-          background:"black"
+          background:"#212529"
         })
        document.body.style.background = "white";
        document.body.style.color = "black";
@@ -64,7 +64,7 @@ const App = ()=>{
     
       <Switch>
           <Route exact path="/">
-          <News key="general" setprogress1={setprogress1} apikey1={apiKey} tgstyle={togglestyle} cat="general"/>
+          <News key="general" setprogress1={setprogress1} apikey1={apiKey} tgstyle={togglestyle} cat="top"/>
           </Route>
           <Route exact path="/Business">
           <News key="buisness" setprogress1={setprogress1} apikey1={apiKey} tgstyle={togglestyle} cat="business"/>
