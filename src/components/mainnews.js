@@ -7,7 +7,7 @@ const Mainnews =(props)=>{
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger m1">
                       {src1}
                 </span>
-                <img src={!imglink?"https://st1.bgr.in/wp-content/uploads/2022/02/GTA-V-PS5-XBox.jpg":imglink} className="card-img-top" style={{height:"10rem"}} alt="news related"/>
+                <img src={imglink} className="card-img-top" style={{height:"10rem"}} alt="news related"/>
             <div className="card-body" style={tgstyle}>
                 <h5 className="card-title">{mytitle}....</h5>
                 <p className="card-text">{mydisc}.....</p>
